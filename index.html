@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es" class="hydrated">
+    
+    <head>
+        <meta charset="UTF-8"><style data-styles="">ion-icon{visibility:hidden}.hydrated{visibility:inherit}</style>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Iniciar sesión y registrarse - Responsive</title>
+        <link rel="stylesheet" href="iniciar-sesion.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Jua&family=Neonderthaw&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=REM:ital,wght@0,100..900;1,100..900&family=Sour+Gummy:wght@100..900&display=swap" 
+rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Jua&family=Neonderthaw&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=REM:ital,wght@0,100..900;1,100..900&family=Rethink+Sans:ital,wght@0,400..800;1,400..800&family=Sour+Gummy:wght@100..900&display=swap" 
+rel="stylesheet">
+     </head>
+
+    <body>
+        <div class="container">
+            <div class="container-form">
+                <form class="sign-in">
+                    <h1>Iniciar Sesión</h1>
+                    <div class="social-networks">
+                        <ion-icon name="logo-instagram" role="img" class="md hydrated"></ion-icon>
+                        <ion-icon name="logo-facebook" role="img" class="md hydrated"></ion-icon>
+                    </div>
+                    <span>Use su correo y contraseña</span>
+                    <div class="box-sign-in">
+                        <ion-icon name="mail-outline" role="img" class="md hydrated"></ion-icon>
+                        <input type="text" placeholder="Email">
+                    </div>
+
+                    <div class="box-sign-in">
+                        <ion-icon name="lock-closed-outline" role="img" class="md hydrated"></ion-icon>
+                        <input type="password" placeholder="contraseña">
+                    </div>
+
+                    <a href="#">¿olvidaste tu contraseña?</a>
+                    
+                    
+                    <button class="incognito" type="button" onclick="window.location.href='menu-empleo.html'">
+                        <ion-icon name="search-outline" role="img" class="md hydrated"></ion-icon>
+                           Modo incognito
+                          </button>
+
+                   <div class="button">
+    
+                 <button id="unclock-sign-in" disabled type="button">Iniciar sesión</button>
+                   </div>
+
+           
+                    <p class="toggle-text">¿No tienes cuenta? <span id="btn-sign-up-mobile">Regístrate</span></p>
+                </form>
+            </div>
+            <div class="container-form">
+                <form class="sign-up">
+                    <h1>Registrarse</h1>
+                    <div class="social-networks">
+                        <ion-icon name="logo-instagram" role="img" class="md hydrated"></ion-icon>
+                        <ion-icon name="logo-facebook" role="img" class="md hydrated"></ion-icon>
+                    </div>
+                    <span>Use su correo para registrarse</span>
+                    <div class="box-sign-up">
+                        <ion-icon name="person-outline" role="img" class="md hydrated"></ion-icon>
+                        <input type="text" placeholder="Nombre">
+                    </div>
+
+                    <div class="box-sign-up">
+                        <ion-icon name="mail-outline" role="img" class="md hydrated"></ion-icon>
+                        <input type="text" placeholder="Email">
+                    </div>
+
+                    <div class="box-sign-up">
+                        <ion-icon name="lock-closed-outline" role="img" class="md hydrated"></ion-icon>
+                        <input type="password" placeholder="contraseña">
+                    </div>
+
+                      <div class="button">
+                 
+                 <button id="unclock-sign-up" disabled type="button">Registrarse</button>
+                  </div>
+
+                    <p class="toggle-text">¿Ya tienes cuenta? <span id="btn-sign-in-mobile">Inicia sesión</span></p>
+                </form>
+            </div>
+            <div class="container-welcome">
+                <div class="welcome-sign-up welcome">
+                    <h3>¡Bienvenido!</h3>
+                    <p>
+                        Ingrese sus datos personales para usar todas las
+                        funciones del sitio
+                    </p>
+                    <button class="button" id="btn-sign-up">Registrarse</button>
+                </div>
+                <div class="welcome-sign-in welcome">
+                    <h3>¡Hola!</h3>
+                    <p>
+                        Registrarse con sus datos personales para usar todas las
+                        funciones del sitio
+                    </p>
+                    <button class="button" id="btn-sign-in">
+                        Iniciar Sesión
+                    </button>
+                </div>
+            </div>
+        </div>
+ 
+        <script src="iniciar-sesion.js"></script>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule="" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    
+
+</body> </html>

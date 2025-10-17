@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--fuentes-->
+
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Jua&family=Neonderthaw&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=REM:ital,wght@0,100..900;1,100..900&family=Sour+Gummy:wght@100..900&display=swap" 
+rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Jua&family=Neonderthaw&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=REM:ital,wght@0,100..900;1,100..900&family=Rethink+Sans:ital,wght@0,400..800;1,400..800&family=Sour+Gummy:wght@100..900&display=swap" 
+rel="stylesheet">
+
+    <!--vinculos-->
+    <link rel="stylesheet" href="gerente.css">
+
+    <!--animacion-->
+    <style>
+
+  @keyframes entrada {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+    </style>
+
+
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1> Ingrese la información.</h1>
+    </header>
+
+<form id="pdf" action="/subir-archivo" method="post" enctype="multipart/form-data">
+    <label for="documento">Certificado de Existencia y Representación Legal:</label>
+    <input type="file" id="documento" name="documento" accept=".pdf">
+
+</form>
+
+    <div class="apartado-izquierda">
+
+    <ul>
+      <li> <label for="nombre">Nombre de la empresa:</label>
+        <input type="text" class="casilla" id="nombre"> </li>
+
+      <li>
+        <label for="nombre">NIT (Número de Identificación Tributaria):</label>
+        <input type="text" class="casilla" id="apellido">
+      </li>
+
+      <li>
+        <label for="nombre">Dirección de la Sede Principal:</label>
+        <input type="text" class="casilla" id="Direccion">
+      </li>
+
+      <li>
+        <label for="nombre">Teléfono Corporativo:</label>
+        <input type="text" class="casilla" id="Telefono">
+      </li>
+
+      <li>
+        <label for="nombre">Pagina web corporativa:</label>
+        <input type="text" class="casilla" id="pagina">
+      </li>
+
+      <span style="color: brown;">Datos del Representante Legal o Contacto de la Empresa:</span>
+        <ol>
+            <label for="nombre">Pagina web corporativa:</label>
+        <input type="text" class="casilla" id="pagina">
+        </ol>
+        <ol>
+            <label for="nombre">Correo Electrónico Corporativo:</label>
+        <input type="text" class="casilla" id="pagina">
+        </ol>
+        <ol>
+            <label for="nombre">Cargo:</label>
+        <input type="text" class="casilla" id="pagina">
+        </ol>
+    </ul>
+
+    <div class="imagen"> 
+        <img src="imagenes/reconocimiento-facial.jpg"  alt="reconocimiento-facial">
+    </div>
+    
+        <div class="boton">
+           
+     <button id="btnEntrar" disabled>Siguiente</button>
+            
+    </div>
+
+    
+    </div>    
+
+
+        <script>
+
+    // 1. Selecciona todos los campos con la clase 'casilla' y el botón
+    const inputs = document.querySelectorAll('.casilla');
+    const botonEntrar = document.getElementById('btnEntrar');
+    
+    // 2. Define la función para verificar si todos los campos están llenos
+    function verificarCampos() {
+        let todosLlenos = true;
+        inputs.forEach(input => {
+            if (input.value.trim() === '') {
+                todosLlenos = false;
+            }
+        });
+        // 3. Habilita o deshabilita el botón según la verificación
+        botonEntrar.disabled = !todosLlenos;
+    }
+
+    // 4. Añade un escuchador de eventos a cada campo de entrada
+    inputs.forEach(input => {
+        input.addEventListener('input', verificarCampos);
+    });
+
+    // 5. Agrega el evento de clic al botón para redirigir
+    botonEntrar.addEventListener('click', function() {
+        // Redirige a la página que deseas
+        window.location.href = 'menu-empleo.html'; 
+    });
+
+        </script>
+
+    
+</body>
+</html>
